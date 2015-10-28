@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Curso CSS3</h1>
+					<h3>CSS (Cascading Style Sheets, u Hojas de Estilo en Cascada) es la tecnología desarrollada por el World Wide Web Consortium (W3C) con el fin de separar la estructura de la presentación.</h3>
+					<p>
+						<small>Created by <a href="http://hakim.se">Omar Fonseca García</a> / <a href="https://twitter.com/OSensay79">@Osensay79</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Que es CSS ?</h2>
+					<p>
+						CSS es un lenguaje utilizado en la presentación de documentos HTML. Entonces podemos decir que el lenguaje CSS sirve para organizar la presentación y aspecto de una página web. Este lenguaje es principalmente utilizado por parte de los navegadores web de internet y por los programadores web informáticos para elegir multitud de opciones de presentación como colores, tipos y tamaños de letra, etc.
+					</p>
+				</section>
+				<section>
+					<h2>Estructura de un selector CSS </h2>
+					<img src="img/estructura.png" width="700px" height="450px" alt=""><br>
+					<ul>
+						<li>Selector</li>
+						<li>declaración</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Capitulo 1</h3>
+					<h2>Selectores</h2>
+					<p>Para crear diseños web profesionales, es imprescindible conocer y dominar los selectores de CSS. Como se vio en la diapositiva anterior, una regla de CSS está formada por una parte llamada "selector" y otra parte llamada "declaración".</p>
+				</section>
+				<section>
+					<h2>Declaración</h2>
+					<p>La declaración indica "que hay que hacer"</p><br>
+					<h2>Selector</h2>
+					<p>el selector indica "a quien hay que hacerlo"</p><br>
+					<p>A un mismo elemento HTML se le pueden aplicar varias reglas CSS y cada regla CSS puede aplicarse a un número ilimitado de elementos. En otras palabras, una misma regla puede aplicarse sobre varios selectores y un mismo selector se puede utilizar en varias reglas.</p>
+				</section>
+				<section>
+						<section>
+							<h1>Selectores básicos</h1>
+						</section>
+						<section>
+							<h2>Selector Universal</h2>
+							<h2>"<strong>*</strong>"</h2>
+							<p>Se utiliza para seleccionar todos los elementos de la página.</p>
+						<!-- aqui va una ejemplo del selector universal -->
+							<img src="img/selector univeral.jpg" height="350px">
+						</section>
+						<section>
+							<h2>Selector de tipo etiqueta</h2>
+							<p>Selecciona todos los elementos de la página cuya etiqueta HTML coincide con el valor del selector.</p>
+						<!-- aqui va una ejemplo del selector tipo etiqueta(ejemplo de  una p y un ul y li) -->
+							<img src="img/etiqueta.jpg" height="300px">
+							<p>Para utilizar este selector, solamente es necesario indicar el nombre de una etiqueta HTML .</p>
+						</section>
+						<section>
+							<h2>Encadenamiento de selectores</h2>
+							<p>Si se quiere aplicar los mismos estilos a dos etiquetas diferentes, se pueden encadenar los selectores.</p>
+						<!-- aqui va una ejemplo del selector tipo encadenamiento de selecores(ejemplo de  una p y un ul y li) -->
+						</section>
+						<section>
+							<h2>Ejemplo selectores </h2>
+							<p>podríamos escribir para cada selector toda las propiedades como por ejemplo:</p>
+						<!-- aqui va una ejemplo del selector tipo encadenamiento de selecores(ejemplo de  una p y un ul y li) -->
+							<img src="img/encadenamiento.jpg" alt="">
+						</section>
+						<section>
+							<h2>encadenamiento</h2>
+							<p>o podríamos poner los selectores a la cual afecte la mismas reglas, separandolor por una coma(,).</p>
+						<!-- aqui va una ejemplo del selector tipo encadenamiento de selecores(ejemplo de  una p y un ul y li) -->
+							<img src="img/encadenamientok.jpg" height="400px">
+						</section>
+						<section>
+							<h2>Selector descendente</h2>
+							<p>Un elemento es descendiente de otro cuando se encuentra entre las etiquetas de apertura y de cierre del otro elemento.</p>
+							<img src="img/htmldescendiente.jpg" height="320px;">
+						</section>
+						<section>
+							<h2>ejemplo selector descendente</h2>
+							<p>El selector del siguiente ejemplo selecciona todos los elementos <span> de la página que se encuentren dentro de un elemento "p"</p>
+								<img src="img/anidacion.jpg" height="320px;">
+						</section>
+						<section>
+							<h2>ejemplo selector descendente</h2>
+							<img src="img/selectordescendiente.jpg" height="280px">
+							<P>Los selectores descendentes permiten aumentar la precisión del selector de tipo o etiqueta.</P>
+						</section>
+						<section>
+							<h1>Selector de clase</h1>
+							<p>si se considera el siguiente código</p>
+							<img src="img/selectordeclase.jpg" height="320px">
+						</section>
+						<section>
+							<h6>¿Cómo se pueden aplicar estilos CSS sólo al primer párrafo? El selector universal (*) no se puede utilizar porque selecciona todos los elementos de la página. El selector de tipo o etiqueta (p) tampoco se puede utilizar porque seleccionaría todos los párrafos. Por último, el selector descendente (body p) tampoco se puede utilizar porque todos los párrafos se encuentran en el mismo sitio.</h6>
+							<p>Una de las soluciones más sencillas para aplicar estilos a un solo elemento de la página consiste en utilizar el atributo class de HTML sobre ese elemento para indicar directamente la regla CSS que se le debe aplicar:</p>
+						</section>
+						<section>
+							<p>A continuación, se crea en el archivo CSS una nueva regla llamada destacado con todos los estilos que se van a aplicar al elemento. Para que el navegador no confunda este selector con los otros tipos de selectores, se prefija el valor del atributo class con un punto (.) tal y como muestra el siguiente ejemplo:</p>
+						</section>
+						<section>
+						<img src="img/destacado.jpg" height="320px">
+							<p>El selector <strong>.destacado</strong> se interpreta como "cualquier elemento de la página cuyo atributo class sea igual a destacado", por lo que solamente el primer párrafo cumple esa condición.</p>
+						</section>
+						<section>
+							<h3>Porque son importantes los selectores de clase</h3>
+							<p>Los selectores de clase son imprescindibles para diseñar páginas web complejas, ya que permiten disponer de una precisión total al seleccionar los elementos. Además, estos selectores permiten reutilizar los mismos estilos para varios elementos diferentes.</p>
+						</section>
+						<section>
+							<img src="img/destacadocss.jpg" height="320px">
+							<p>Con esta clase tendriamos un texto por ejemplo de color rojo.</p>
+
+						</section>
+						<section>
+								<p>Podríamos utilizar la misma clase para distintas partes de nuestra página web.</p>
+								<img src="img/destacadovarios.jpg" height="320px" width="900px">
+						</section>
+						<section>
+						<h2>Selector de ID</h2>
+						<p>En ocasiones, es necesario aplicar estilos CSS a un único elemento de la página. Aunque puede utilizarse un selector de clase para aplicar estilos a un único elemento, existe otro selector más eficiente en este caso.</p>
+						<img src="img/id.jpg" height="320px">
+						</section>
+						<section>
+							<p>La sintaxis de los selectores de ID es muy parecida a la de los selectores de clase, salvo que se utiliza el símbolo de la almohadilla (#) en vez del punto (.) como prefijo del nombre de la regla CSS:</p>
+							<img src="img/idcss.jpg" height="320px">
+						</section>
+						<section>
+						<p>La principal diferencia entre este tipo de selector y el selector de clase tiene que ver con HTML y no con CSS. Como se sabe, en una misma página, el valor del atributo id debe ser único, de forma que dos elementos diferentes no pueden tener el mismo valor de id. Sin embargo, el atributo class no es obligatorio que sea único, de forma que muchos elementos HTML diferentes pueden compartir el mismo valor para su atributo class.</p>
+						</section>
+						<section>
+							<h2>combinación de selectores básicos</h2>
+							<p>CSS permite la combinación de uno o más tipos de selectores para restringir el alcance de las reglas CSS.</p>
+							<img src="img/avisoespecial.jpg" height="200px">
+							<p>El anterior selector solamente selecciona aquellos elementos con un <stron><em>class="especial"</em></stron> que se encuentren dentro de cualquier elemento con <strong><em>un class="aviso"</em></strong>.</p>
+						</section>
+						<section>
+							<img src="img/divaviso.jpg" height="320px">
+							<p>Ahora, el selector solamente selecciona aquellos elementos de tipo <em>span</em> con un atributo class="especial" que estén dentro de cualquier elemento de tipo <em>div</em> que tenga un atributo class="aviso".</p>
+						</section>
+						<section>
+							<h2>SELECTORES AVANZADOS</h2>
+							<p>Utilizando solamente los selectores básicos de la sección anterior, es posible diseñar prácticamente cualquier página web. No obstante, CSS define otros selectores más avanzados que permiten simplificar las hojas de estilos</p>
+						</section>
+						<section>
+							<h3>selector de hijos</h3>
+							<p>Se trata de un selector similar al selector descendente, pero muy diferente en su funcionamiento. Se utiliza para seleccionar un elemento que es hijo directo de otro elemento y se indica mediante el "signo de mayor que" (>):</p>
+							<img src="img/selectorhijo.jpg" height="300px">
+						</section>
+						<section>
+							<img src="img/uno.jpg" height="200px"><br>
+							<img src="img/dos.jpg" height="300px">
+						</section>
+						<section>
+							<p>El primer selector es de tipo descendente y por tanto se aplica a todos los elementos "a" que se encuentran dentro de elementos "p". En este caso, los estilos de este selector se aplican a los dos enlaces.</p>
+
+							<p>Por otra parte, el selector de hijos obliga a que el elemento "a" sea hijo directo de un elemento "p". Por lo tanto, los estilos del selector "p > a" no se aplican al segundo enlace del ejemplo anterior.</p>
+						</section>
+						<section>
+							<h3> Selector adyacente</h3>
+							<p>El selector adyacente se emplea para seleccionar elementos que en el código HTML de la página se encuentran justo a continuación de otros elementos. Su sintaxis emplea el signo + para separar los dos elementos:</p>
+							<img src="img/adyacente.jpg" height="280px">
+						</section>
+						<section>
+							<h2>agrupación de reglas</h2>
+							<p>Cuando se crean archivos CSS complejos con decenas o cientos de reglas, es habitual que los estilos que se aplican a un mismo selector se definan en diferentes reglas:</p>
+							<img src="img/sueltas.jpg" height="330px">
+						</section>
+						<section>
+							<p>Cuando el selector de dos o más reglas CSS es idéntico, se pueden agrupar las declaraciones de las reglas para hacer las hojas de estilos más eficientes:</p>
+							<img src="img/agrupadas.jpg" height="320px">
+						</section>
+						<section>
+							<h2>colisiones de estilos</h2>
+							<p>En las hojas de estilos complejas, es habitual que varias reglas CSS se apliquen a un mismo elemento HTML. El problema de estas reglas múltiples es que se pueden dar colisiones como la del siguiente ejemplo:</p>
+							<img src="img/colision.jpg" height="300px">
+						</section>
+						<section>
+							<p>El método seguido por CSS para resolver las colisiones de estilos se muestra a continuación:</p>
+							<ol>
+								<li>Determinar todas las declaraciones que se aplican al elemento para el medio CSS seleccionado.</li>
+								<li>Ordenar las declaraciones según su origen (CSS de navegador, de usuario o de diseñador) y su prioridad (palabra clave !important).</li>
+								<li>Ordenar las declaraciones según lo específico que sea el selector. Cuanto más genérico es un selector, menos importancia tienen sus declaraciones.</li>
+								<li>Si después de aplicar las normas anteriores existen dos o más reglas con la misma prioridad, se aplica la que se indicó en último lugar.</li>
+							</ol>
+						</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>capitulo 2</h2>
+						<h2>Unidades de medida y colores</h2>
+						<p>Muchas de las propiedades de CSS que se veremos mas adelante permiten indicar medidas y colores en sus valores. Además, CSS es tan flexible que permite indicar las medidas y colores de muchas formas diferentes.</p>
+					</section>
+
+				<section>
+					<h2>Unidades de medida</h2>
+					<p>Las medidas en CSS se emplean, entre otras, para definir la altura, anchura y márgenes de los elementos y para establecer el tamaño de letra del texto. Todas las medidas se indican como un valor numérico entero o decimal seguido de una unidad de medida (sin ningún espacio en blanco entre el número y la unidad de medida).</p>
+					<img src="img/medida.jpg" height="250px;">
+				</section>
+					<section>
+						<h2>Medidas Absolutas y relativas</h2>
+						<h3>Medidad Absolutas</h3>
+						<p>Las unidades absolutas establecen de forma completa el valor de una medida, por lo que su valor real es directamente el valor indicado.</p>
+						<img src="img/absolutas.jpg" height="300px">
+					</section>
+					<section>
+						<h3>Medidas Relativas</h3>
+						<p>medidas relativas definen su valor en relación con otra medida, por lo que para obtener su valor real, se debe realizar alguna operación con el valor indicado.</p>
+						<img src="img/relativas.jpg" height="320px">
+					</section>
+					<section>
+						<h2>Porcentajes</h2>
+						<p>El porcentaje también es una unidad de medida relativa, aunque por su importancia CSS la trata de forma separada a em, ex y px. Un porcentaje está formado por un valor numérico seguido del símbolo % y siempre está referenciado a otra medida. Cada una de las propiedades de CSS que permiten indicar como valor un porcentaje, define el valor al que hace referencia ese porcentaje.</p>
+					</section>
+					<section>
+						<img src="img/porcentajes.jpg" height="420px">
+					</section>
+					<section>
+						<h2>recomendaciones</h2>
+						<p>En general, se recomienda el uso de unidades relativas siempre que sea posible, ya que mejora la accesibilidad de la página y permite que los documentos se adapten fácilmente a cualquier medio y dispositivo.</p>
+					</section>
+				</section>
+			<section>
+					<section>
+						<h1>COLORES</h1>
+						<P>Los colores en CSS se pueden indicar de cinco formas diferentes: palabras clave, colores del sistema, RGB hexadecimal, RGB numérico y RGB porcentual. Aunque el método más habitual es el del RGB hexadecimal, a continuación se muestran todas las alternativas que ofrece CSS</P>
+					</section>
+					<section>
+						<h2>Palabras clave</h2>
+						<p>CSS define 17 palabras clave para referirse a los colores básicos. Las palabras se corresponden con el nombre en inglés de cada color:</p>
+						<img src="img/clavecolores.jpg" height="370px">
+					</section>
+					<section>
+						<h2>RGB decimal</h2>
+						<p>Si todas las componentes valen 0, el color creado es el negro y si todas las componentes toman su valor máximo, el color obtenido es el blanco. En CSS, las componentes de los colores definidos mediante RGB decimal pueden tomar valores entre 0 y 255. El siguiente ejemplo establece el color del texto de un párrafo:</p>
+						<img src="img/rgbdecimal.jpg" height="250px">
+					</section>
+					<section>
+						<h2>RGB Porcentual</h2>
+						<p>El funcionamiento y la sintaxis de este método es el mismo que el del RGB decimal. La única diferencia es que en este caso el valor de las componentes RGB puede tomar valores entre 0% y 100%. Por tanto, para transformar un valor RGB decimal en un valor RGB porcentual, es preciso realizar una regla de tres considerando que 0 es igual a 0% y 255 es igual a 100%.</p>
+						<img src="img/rgbporcentual.jpg" height="200px">
+					</section>
+					<section>
+						<h2>RGB hexadecimal</h2>
+						<p>Aunque es el método más complicado para indicar los colores, se trata del método más utilizado con mucha diferencia. De hecho, prácticamente todos los sitios web reales utilizan exclusivamente este método.</p>
+						<img src="img/rgbhexadecimal.jpg" height="220px">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1> Modelo de cajas</h1>
+						<p>El modelo de cajas o "box model" es seguramente la característica más importante del lenguaje de hojas de estilos CSS, ya que condiciona el diseño de todas las páginas web. El modelo de cajas es el comportamiento de CSS que hace que todos los elementos de las páginas se representen mediante cajas rectangulares.</p>
+					</section>
+					<section>
+						<p>Las cajas de una página se crean automáticamente. Cada vez que se inserta una etiqueta HTML, se crea una nueva caja rectangular que encierra los contenidos de ese elemento. La siguiente imagen muestra las tres cajas rectangulares que crean las tres etiquetas HTML que incluye la página:</p>
+						<img src="img/bordes.gif" height="300px" width="800px;">
+					</section>
+					<section>
+						<p>Las cajas de las páginas no son visibles a simple vista porque inicialmente no muestran ningún color de fondo ni ningún borde.</p>
+						<img src="img/forzarimagen.gif" height="500px" width="800px">
+					</section>
+					<section>
+						<p>Los navegadores crean y colocan las cajas de forma automática, pero CSS permite modificar todas sus características. Cada una de las cajas está formada por seis partes, tal y como muestra la siguiente imagen:</p>
+						<img src="img/3dboxmodel.png">
+					</section>
+					<section>
+						<ul>
+							<li>Contenido (content): se trata del contenido HTML del elemento (las palabras de un párrafo, una imagen, el texto de una lista de elementos, etc.)</li>
+							<li>Relleno (padding): espacio libre opcional existente entre el contenido y el borde.</li>
+							<li>Borde (border): línea que encierra completamente el contenido y su relleno.</li>
+							<li>Imagen de fondo (background image): imagen que se muestra por detrás del contenido y el espacio de relleno.</li>
+							<li>Color de fondo (background color): color que se muestra por detrás del contenido y el espacio de relleno.</li>
+							<li>Margen (margin): separación opcional existente entre la caja y el resto de cajas adyacentes.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>anchura y altura</h2>
+						<h3>anchura</h3>
+						<p>la propiedad CSS que controla la anchura de la caja de los elemetos se denomina <a href="#">width</a></p>
+						<img src="img/anchura.jpg" height="300px">
+					</section>
+					<section>
+						<h3>altura</h3>
+						<p>La propiedad CSS que controla la altura de los elementos se denomina <a href="#">height</a>.</p>
+						<img src="img/altura.jpg" height="300px">
+					</section>
+					<section>
+						<h2>margen y relleno</h2>
+						<h3>margen</h3>
+						<p>CSS define cuatro propiedades para controlar cada uno de los márgenes horizontales y verticales de un elemento</p>
+						<img src="img/propiedadesmargen.jpg" height="300px">
+					</section>
+			<section>
+					<p>Cada una de las propiedades establece la separación entre el borde lateral de la caja y el resto de cajas adyacentes:</p>
+					<img src="img/margenes.jpg" height="350px">
+				</section>
+				<section>
+					<h3>Relleno</h3>
+					<p>CSS define cuatro propiedades para controlar cada uno de los espacios de relleno horizontales y verticales de un elemento.</p>
+					<img src="img/padding.jpg" height="350px">
+				</section>
+				<section>
+					<p>Cada una de estas propiedades establece la separación entre el contenido y los bordes laterales de la caja del elemento:</p>
+					<img src="img/paddingejemplo.jpg" height="350px">
+				</section>
+				<section>
+					<h3>Margen, relleno, bordes y modelo de cajas</h3>
+					<p>La anchura y altura de un elemento no solamente se calculan teniendo en cuenta sus propiedades width y height. El margen, el relleno y los bordes establecidos a un elemento determinan la anchura y altura final del elemento. </p>
+					<img src="img/mrbmc.jpg" height="300px">
+				</section>
+				<section>
+					<img src="img/suma.jpg" height="330px">
+				</section>
+				<section>
+					<p>De esta forma, la anchura del elemento en pantalla sería igual a la suma de la anchura original, los márgenes, los bordes y los rellenos:</p>
+					<h6>30px + 10px + 50px + 300px + 50px + 10px + 30px = 480 píxel</h6>
+					<p>Así, la anchura/altura establecida con CSS siempre hace referencia a la anchura/altura del contenido. La anchura/altura total del elemento debe tener en cuenta además los valores del resto de partes que componen la caja del box model.</p>
+				</section>
+		</section>
+		<section>
+			<section>
+				<h2>Fondos</h2>
+				<p>El último elemento que forma el box model es el fondo de la caja del elemento. El fondo puede ser un color simple o una imagen. El fondo solamente se visualiza en el área ocupada por el contenido y su relleno, ya que el color de los bordes se controla directamente desde los bordes y las zonas de los márgenes siempre son transparentes.</p>
+
+<p>Para establecer un color o imagen de fondo en la página entera, se debe establecer un fondo al elemento <strong>"body"</strong>. Si se establece un fondo a la página, como el valor inicial del fondo de los elementos es transparente, todos los elementos de la página se visualizan con el mismo fondo a menos que algún elemento especifique su propio fondo.</p>
+			</section>
+			<section>
+				<h3>background-color</h3>
+				<p>La propiedad background-color permite mostrar un color de fondo sólido en la caja de un elemento. Esta propiedad no permite crear degradados ni ningún otro efecto avanzado.</p>
+				<img src="img/backgroundcolor.jpg" height="320px">
+			</section>
+			<section>
+				<p>El siguiente ejemplo muestra una página web con un color gris claro de fondo:</p>
+				<img src="img/ejemploback.jpg" height="320px">
+			</section>
+			<section>
+				<h3>background-image</h3>
+				<p>Para crear efectos gráficos avanzados, es necesario utilizar la propiedad background-image, que permite mostrar una imagen como fondo de la caja de cualquier elemento:</p>
+				<img src="img/backgroundimage.jpg" height="320px">
+			</section>
+			<section>
+				<p>CSS permite establecer de forma simultánea un color y una imagen de fondo. En este caso, la imagen se muestra delante del color, por lo que solamente si la imagen contiene zonas transparentes es posible ver el color de fondo.</p>
+				<img src="img/ejemplobackimg.jpg" height="320px">
+			</section>
+			<section>
+				<h3>background</h3>
+				<p>Por último, CSS define una propiedad de tipo "shorthand" para indicar todas las propiedades de los colores e imágenes de fondo de forma directa. La propiedad se denomina background y es la que generalmente se utiliza para establecer las propiedades del fondo de los elementos.</p>
+				<img src="img/backgroundtotal.jpg" height="320px">
+			</section>
+			<section>
+				<p>El orden en el que se indican las propiedades es indiferente, aunque en general se sigue el formato indicado de color, url de imagen, repetición y posición.</p>
+				<img src="img/backgroundtotal1.jpg" height="340px">
+				<p>La propiedad background permite asignar todos o sólo algunos de todos los valores que se pueden definir.</p>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2>posicionamiento y visualizacion</h2>
+				<p>En este capítulo se muestran los cinco tipos de posicionamientos definidos para las cajas y se presentan otras propiedades que afectan a la forma en la que se visualizan las cajas.</p>
+			</section>
+			<section>
+				<h2>tipos de elementos</h2>
+				<p>El estándar HTML clasifica a todos sus elementos en dos grandes grupos: elementos en línea y elementos de bloque.</p>
+				<p>Los elementos de bloque ("block elements" en inglés) siempre empiezan en una nueva línea y ocupan todo el espacio disponible hasta el final de la línea. Por su parte, los elementos en línea ("inline elements" en inglés) no empiezan necesariamente en nueva línea y sólo ocupan el espacio necesario para mostrar sus contenidos.</p>
+			</section>
+			<section>
+				<img src="img/elementos.jpg" height="360px">
+				<p>Debido a este comportamiento, el tipo de un elemento influye de forma decisiva en la caja que el navegador crea para mostrarlo. La siguiente imagen muestra las cajas que crea el navegador para representar los diferentes elementos que forman una página HTML</p>
+			</section>
+			<section>
+				<h2>posicionamiento</h2>
+				<p>Los navegadores crean y posicionan de forma automática todas las cajas que forman cada página HTML. No obstante, CSS permite al diseñador modificar la posición en la que se muestra cada caja.</p>
+				<ul>
+					<li>Posicionamiento normal o estatico</li>
+					<li>posicionamiento relativo</li>
+					<li>posicionamiento absoluto</li>
+					<li>posicionamiento fijo</li>
+					<li>posicionamiento flotante</li>
+				</ul>
+			</section>
+			<section>
+				<img src="img/posicionamiento.jpg" height="320px">
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2>visualizacion</h2>
+				<p>Además de las propiedades que controlan el posicionamiento de los elementos, CSS define otras cuatro propiedades para controlar su visualización: display, visibility, overflow y z-index.</p>
+			</section>
+				<section>
+					<h3>propiedades display y visbility</h3>
+					<p>Las propiedades display y visibility controlan la visualización de los elementos. Las dos propiedades permiten ocultar cualquier elemento de la página. Habitualmente se utilizan junto con JavaScript para crear efectos dinámicos como mostrar y ocultar determinados textos o imágenes cuando el usuario pincha sobre ellos.</p>
+				</section>
+				<section>
+					<h3>display</h3>
+					<p>Las posibilidades de la propiedad display son mucho más avanzadas que simplemente ocultar elementos. En realidad, la propiedad display modifica la forma en la que se visualiza un elemento.</p>
+					<img src="img/display.jpg" height="320px">
+				</section>
+				<section>
+					<p>Los valores más utilizados son inline, block y none. El valor block muestra un elemento como si fuera un elemento de bloque, independientemente del tipo de elemento que se trate. El valor inline visualiza un elemento en forma de elemento en línea, independientemente del tipo de elemento que se trate.</p>
+					<img src="img/ejemplosdisplay.jpg" height="320px">
+				</section>
+
+		</section>
+		<section>
+			<section>
+				<h2>Texto</h2>
+				<h3>tipografia</h3>
+				<p>CSS define numerosas propiedades para modificar la apariencia del texto. A pesar de que no dispone de tantas posibilidades como los lenguajes y programas específicos para crear documentos impresos, CSS permite aplicar estilos complejos y muy variados al texto de las páginas web.</p>
+			</section>
+			<section>
+				<h3>tipografia color</h3>
+				<p>La propiedad básica que define CSS relacionada con la tipografía se denomina color y se utiliza para establecer el color de la letra</p>
+				<img src="img/tipocolor.jpg" height="320px">
+			</section>
+			<section>
+				<p>A continuación se muestran varias reglas CSS que establecen el color del texto de diferentes formas:</p>
+				<img src="img/tipocolorejemplo.jpg" height="360px">
+			</section>
+			<section>
+				<h3>font-family</h3>
+				<p>La otra propiedad básica que define CSS relacionada con la tipografía se denomina font-family y se utiliza para indicar el tipo de letra con el que se muestra el texto.</p>
+				<img src="img/font-family.jpg" height="320px">
+			</section>
+			<section>
+				<p>El tipo de letra del texto se puede indicar de dos formas diferentes:</p>
+				<ul>
+					<li>Mediante el nombre de una familia tipográfica: en otras palabras, mediante el nombre del tipo de letra, como por ejemplo "Arial", "Verdana", "Garamond", etc.</li>
+					<li>Mediante el nombre genérico de una familia tipográfica: los nombres genéricos no se refieren a ninguna fuente en concreto, sino que hacen referencia al estilo del tipo de letra. Las familias genéricas definidas son serif (tipo de letra similar a Times New Roman), sans-serif (tipo Arial), cursive (tipo Comic Sans), fantasy (tipo Impact) y monospace (tipo Courier New).</li>
+				</ul>
+			</section>
+			<section>
+				<h3>font-size</h3>
+				<p>Una vez seleccionado el tipo de letra, se puede modificar su tamaño mediante la propiedad <a href="#">font-size</a>.</p>
+				<img src="img/fontsize.jpg" height="320px">
+			</section>
+			<section>
+				<p>Además de todas las unidades de medida relativas y absolutas y el uso de porcentajes, CSS permite utilizar una serie de palabras clave para indicar el tamaño de letra del texto:</p>
+
+				<p>tamaño_absoluto: indica el tamaño de letra de forma absoluta mediante alguna de las siguientes palabras clave: <a href="#">xx-small, x-small, small, medium, large, x-large, xx-large.</a></p>
+				<p>tamaño_relativo: indica de forma relativa el tamaño de letra del texto mediante dos palabras clave <a href="#">(larger, smaller)</a> que toman como referencia el tamaño de letra del elemento padre.</p>
+			</section>
+			<section>
+				<h3>texto</h3>
+				<p>Además de las propiedades relativas a la tipografía del texto, CSS define numerosas propiedades que determinan la apariencia del texto en su conjunto. Estas propiedades adicionales permiten controlar al alineación del texto, el interlineado, la separación entre palabras, etc.</p>
+				<img src="img/texto.jpg" height="320px">
+			</section>
+			<section>
+				<h3>text-decoration</h3>
+				<p>Además de la decoración que se puede aplicar a la tipografía que utilizan los textos, CSS define otros estilos y decoraciones para el texto en su conjunto. La propiedad que decora el texto se denomina <a href="#">text-decoration.</a></p>
+				<img src="img/textdecoration.jpg" height="320px">
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>imagenes</h3>
+				<h4>establecer la anchura y la altura de las imagenes</h4>
+				<p>Utilizando las propiedades width y height, es posible mostrar las imágenes con cualquier altura/anchura, independientemente de su altura/anchura real:</p>
+				<p><img src="img/imagenmedidas.jpg" height="320px"></p>
+			</section>
+			<section>
+				<p>Por otra parte, establecer la altura/anchura de todas las imágenes mediante CSS es una práctica poco recomendable. El motivo es que normalmente dos imágenes diferentes no comparten la misma altura/anchura. Por lo tanto, se debe crear una nueva regla CSS (y un nuevo selector) para cada una de las diferentes imágenes del sitio web.</p>
+				<p>En la práctica, esta forma de trabajo produce una sobrecarga de estilos que la hace inviable. Por este motivo, se recomienda establecer la altura/anchura de las imágenes mediante los atributos width y height de la etiqueta "img":</p>
+				<img src="img/medidahtml.jpg" >
+			</section>
+		</section>
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Vertical Slides</h2>
+						<p>Slides can be nested inside of each other.</p>
+						<p>Use the <em>Space</em> key to navigate through all slides.</p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+						<h2>Basement Level 1</h2>
+						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+					</section>
+					<section>
+						<h2>Basement Level 2</h2>
+						<p>That's it, time to go back up.</p>
+						<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+
+				<section>
+					<h2>Slides</h2>
+					<p>
+						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Point of View</h2>
+					<p>
+						Press <strong>ESC</strong> to enter the slide overview.
+					</p>
+					<p>
+						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+					</p>
+				</section>
+
+				<section>
+					<h2>Touch Optimized</h2>
+					<p>
+						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
+					</p>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Markdown support
+
+						Write content using inline or external Markdown.
+						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+
+						```
+						<section data-markdown>
+						  ## Markdown support
+
+						  Write content using inline or external Markdown.
+						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+						</section>
+						```
+					</script>
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h2>Fragments</h2>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+					<section>
+						<h2>Fragment Styles</h2>
+						<p>There's different types of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p class="fragment current-visible">current-visible</p>
+						<p class="fragment highlight-red">highlight-red</p>
+						<p class="fragment highlight-blue">highlight-blue</p>
+					</section>
+				</section>
+
+				<section id="transitions">
+					<h2>Transition Styles</h2>
+					<p>
+						You can select from different transitions, like: <br>
+						<a href="?transition=none#/transitions">None</a> -
+						<a href="?transition=fade#/transitions">Fade</a> -
+						<a href="?transition=slide#/transitions">Slide</a> -
+						<a href="?transition=convex#/transitions">Convex</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a>
+					</p>
+				</section>
+
+				<section id="themes">
+					<h2>Themes</h2>
+					<p>
+						reveal.js comes with a few themes built in: <br>
+						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+					</p>
+				</section>
+
+				<section>
+					<section data-background="#dddddd">
+						<h2>Slide Backgrounds</h2>
+						<p>
+							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+						</p>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+						<h2>Image Backgrounds</h2>
+						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
+						<h2>Tiled Backgrounds</h2>
+						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+					</section>
+					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+							<h2>Video Backgrounds</h2>
+							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+						</div>
+					</section>
+					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+						<h2>... and GIFs!</h2>
+					</section>
+				</section>
+
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+					</p>
+					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+				</section>
+
+				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						You can override background transitions per-slide.
+					</p>
+					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+				</section>
+
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+
+				<section>
+					<h2>Marvelous List</h2>
+					<ul>
+						<li>No order here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Fantastic Ordered List</h2>
+					<ol>
+						<li>One is smaller than...</li>
+						<li>Two is smaller than...</li>
+						<li>Three!</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Tabular Tables</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th>Value</th>
+								<th>Quantity</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Apples</td>
+								<td>$1</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td>Lemonade</td>
+								<td>$2</td>
+								<td>18</td>
+							</tr>
+							<tr>
+								<td>Bread</td>
+								<td>$3</td>
+								<td>2</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,
+						<a href="#/2/3">like this</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Speaker View</h2>
+					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+					<p>Press the <em>S</em> key to try it out.</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section>
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
+					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+				</section>
+
+				<section>
+					<h2>Global State</h2>
+					<p>
+						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+						will be added as a class to the document element when the slide is open. This lets you
+						apply broader style changes, like switching the page background.
+					</p>
+				</section>
+
+				<section data-state="customevent">
+					<h2>State Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+Reveal.addEventListener( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+} );
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Take a Moment</h2>
+					<p>
+						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+					</p>
+				</section>
+
+				<section>
+					<h2>Much more</h2>
+					<ul>
+						<li>Right-to-left support</li>
+						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p>
+						- <a href="http://slides.com">Try the online editor</a> <br>
+						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
